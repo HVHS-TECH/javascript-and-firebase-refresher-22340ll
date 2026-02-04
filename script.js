@@ -6,7 +6,8 @@ console.log("raaaahhhhh")
 // 3. Define the function to run on click
 function changeText() {
     const paragraph = document.getElementById('demo');
-    paragraph.textContent = 'The button was clicked!';
+    paragraph.textContent = 'welldone';
+    welcomeMessage.textContent = "You pressed the button!";
 }
 
 // 4. Select the button and add an event listener
