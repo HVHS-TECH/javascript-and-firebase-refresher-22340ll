@@ -27,7 +27,8 @@
         <li>Create a new Firebase or re-use yours from last year</li>
         <li>Remember how to connect up the 'authorised domains'</li>
         <li>Add a button - Make it save the text to Firebase </li>
-        <p id="fbtest">Button not clicked.</p>
+        <input type="text" id="dataInput" placeholder="Enter data">
+        <button id="submitButton">Submit</button>
         <li>Add another button - Make it read the message from Firebase and write it to the heading of this page</li>
     </ul>
     <h4>Firebase logins</h4>
@@ -54,9 +55,7 @@
     
     <!--3. add in firebase-->
         <h1>Write Data to Firebase</h1>
-    <input type="text" id="dataInput" placeholder="Enter data">
-    <button onclick="writeData()">Submit</button>
-
+        
     <!-- Firebase SDK initialization scripts -->
     <script src="https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/12.8.0/firebase-analytics.js"></script>
