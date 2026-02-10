@@ -1,20 +1,8 @@
-
-document.addEventListener("DOMContentLoaded", function() {
-    var messageSpace = document.getElementById("welcomeMessage");
-    messageSpace.innerHTML = "Your not in the right place! get out";
-    console.log("raaaahhhhh")
+document.addEventListener("DOMContentLoaded", function(event) {
+  console.log("DOM fully loaded and parsed");
+  // You can safely run your DOM manipulation code here
+  document.getElementById("demo").innerHTML = "HTML is loaded!";
 });
-//Javascript
-
-  function changeText() {
-    const paragraph = document.getElementById('demo');
-    paragraph.textContent = 'welldone';
-    welcomeMessage.textContent = "You pressed the button!";
-  }
-
-  // 4. Select the button and add an event listener
-    const button = document.getElementById('myButton');
-    button.addEventListener('click', changeText);
 
 // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";

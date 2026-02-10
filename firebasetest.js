@@ -84,3 +84,9 @@ function readUserData(userId) {
     onlyOnce: false // Set to true if you only want to read once
   });
 }
+
+export {
+writeData,
+writeUserData,
+readUserData
+};
