@@ -378,11 +378,9 @@ export {
     fb_setAdminStatus,
     fb_writeGameScore,
     fb_getHighScores,
-    fb_resumeAudio,
     fb_getAllUsers,
     fb_getAllGameScores,
     fb_deleteUser,
     fb_deleteScore,
-    auth,
     
 };
