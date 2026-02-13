@@ -22,22 +22,17 @@ button.addEventListener('click', changeText);
     welcomeMessage.textContent = "You pressed the button!";
   }
 
-
-// Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-analytics.js";
-  import { 
-    getDatabase,
-    ref,
-    set
-} from "https://www.gstatic.com/firebasejs/12.8.0/firebase-database.js";
-  import { getAuth } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-auth.js";
-  import { GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup } 
+from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+    import { getAnalytics } 
+from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// For Firebase mjs SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
   apiKey: "AIzaSyB_CnBPy37yHOG3tgT9IHAKsyx3KMOKXfU",
   authDomain: "uuuuhhhhhh-34d89.firebaseapp.com",
@@ -55,6 +50,7 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const database = getDatabase(app);
 const provider = new GoogleAuthProvider();
+
 
 /**
  * Initializes Firebase and AudioContext

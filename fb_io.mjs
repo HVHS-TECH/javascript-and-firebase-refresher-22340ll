@@ -1,25 +1,8 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-analytics.js";
-import { 
-    getAuth, 
-    GoogleAuthProvider, 
-    signInWithPopup,
-    onAuthStateChanged,
-    signOut
-} from "https://www.gstatic.com/firebasejs/12.8.0/firebase-auth.js";
-
-import { 
-    getDatabase,
-    ref,
-    set,
-    get,
-    query,
-    orderByChild,
-    limitToLast,
-    remove
-} from "https://www.gstatic.com/firebasejs/12.8.0/firebase-database.js";
-
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup } 
+from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+// For Firebase mjs SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
   apiKey: "AIzaSyB_CnBPy37yHOG3tgT9IHAKsyx3KMOKXfU",
   authDomain: "uuuuhhhhhh-34d89.firebaseapp.com",
@@ -364,6 +347,27 @@ async function fb_deleteScore(game, uid) {
     }
 }
 
+// Audio Context
+let audioContext;
+
+/**
+ * Initializes Firebase and AudioContext
+ * @returns {Promise<FirebaseApp>} Initialized Firebase app
+ */
+async function fb_initialise() {
+    try {
+        // Initialize AudioContext if not already created
+        if (!audioContext) {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            audioContext.suspend();
+            console.log("AudioContext created (suspended)");
+        }
+        return app;
+    } catch (e) {
+        console.error("Initialization error:", e);
+        throw e;
+    }
+}
 
 export {
     fb_initialise,
