@@ -14,13 +14,6 @@ function changeText() {
 // 4. Select the button and add an event listener
 const button = document.getElementById('myButton');
 button.addEventListener('click', changeText);
-//Javascript
-
-  function changeText() {
-    const paragraph = document.getElementById('demo');
-    paragraph.textContent = 'welldone';
-    welcomeMessage.textContent = "You pressed the button!";
-  }
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
