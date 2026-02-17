@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup } 
-from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";   
 // For Firebase mjs SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
   apiKey: "AIzaSyB_CnBPy37yHOG3tgT9IHAKsyx3KMOKXfU",
